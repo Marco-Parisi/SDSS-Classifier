@@ -1,2 +1,2 @@
-# SDSS-Classifier
- 
+# SDSS-Classifier (work in progress)
+This is a project for analyze and classify the data from the Sloan Digital Sky Survey (SDSS) that provide photometric and spectroscopic measure of Quasars, Galaxies and Stars. SDSS data are public accessible and can be download from https://www.sciserver.org/. 
