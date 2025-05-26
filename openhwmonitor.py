@@ -1,3 +1,33 @@
+"""OpenHWMonitor COM Monitoring Library
+
+This library provides a Python interface to monitor hardware sensors using the OpenHardwareMonitor COM interface.
+It leverages the wmi package to access sensor data and provides functionality to collect CPU and GPU
+power, usage, and temperature readings over time.
+
+Author: Marco Parisi
+License: MIT License
+
+Dependencies:
+    - wmi
+    - psutil
+    - pythoncom
+
+Usage:
+    1. Instantiate the OpenHWMonitor class.
+    2. Start monitoring with start_monitoring(interval=1).  The interval specifies the measurement frequency in seconds.
+    3. Stop monitoring with stop_monitoring().
+    4. Retrieve statistics with get_stats().
+
+Example:
+    import OpenHWMonitor
+    ohwm = OpenHWMonitor.OpenHWMonitor()
+    ohwm.start_monitoring(interval=2)
+    time.sleep(10)  # Monitor for 10 seconds every 2 seconds (interval)
+    ohwm.stop_monitoring()
+    stats = ohwm.get_stats()
+    print(stats)
+"""
+
 import wmi
 import time
 import psutil
